@@ -399,7 +399,7 @@ mod tests {
         let translation = Vec2::new(2.0, 1.0);
 
         let aabb = rectangle.aabb_2d(translation, std::f32::consts::FRAC_PI_4);
-        let expected_half_size = Vec2::splat(1.0606601);
+        let expected_half_size = Vec2::new(1.0606601, 1.0606602);
         assert_eq!(aabb.min, translation - expected_half_size);
         assert_eq!(aabb.max, translation + expected_half_size);
 
